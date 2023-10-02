@@ -4,7 +4,12 @@ import Content from "./components/Content";
 import Header from "./components/Header";
 import styled from "styled-components";
 import { createContext, useState } from "react";
-import { Template, defaultTemplate } from "./data/Templates";
+import {
+  ExpansionKey,
+  Template,
+  defaultExpansionKey,
+  defaultTemplate,
+} from "./data/Templates";
 
 const AppRoot = styled.div`
   display: block;
@@ -16,6 +21,8 @@ export const GlobalContext = createContext<any>(null);
 export type globalContextTypes = {
   currentTemplate: Template;
   setcurrentTemplate: React.Dispatch<React.SetStateAction<Template>>;
+  currentExpKey: ExpansionKey;
+  setcurrentExpKey: React.Dispatch<React.SetStateAction<ExpansionKey>>;
 };
 
 function App() {
@@ -23,9 +30,16 @@ function App() {
     ...defaultTemplate,
   });
 
+  const [currentExpKey, setcurrentExpKey] = useState({
+    ...defaultExpansionKey,
+    label: "Label Not Set",
+  });
+
   const globalContextValues: globalContextTypes = {
     currentTemplate,
     setcurrentTemplate,
+    currentExpKey,
+    setcurrentExpKey,
   };
   return (
     <GlobalContext.Provider value={globalContextValues}>

@@ -76,14 +76,14 @@ export const YealinkAccount: Account = {
 
 export type Template = {
   accounts?: Account[];
-  language : string
+  language: string;
   linekeys?: LineKey[];
   expansionkeys?: ExpansionKey[];
 };
 
 export const defaultTemplate: Template = {
   accounts: [],
-  language : "",
+  language: "",
   linekeys: [],
   expansionkeys: [],
 };

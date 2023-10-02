@@ -157,7 +157,6 @@ function LinekeyModule() {
                   }}
                   displayEmpty={true}
                   notched={true}
-
                   renderValue={() => {
                     const element = linekeytypes.find(
                       (item) => item.number === data.type
@@ -199,7 +198,10 @@ function LinekeyModule() {
             const linekeysCopy = [...currentTemplate.linekeys];
             linekeysCopy.push({
               ...defaultLineKey,
-              line_number: linekeysCopy.length===0? 1 : linekeysCopy[linekeysCopy.length-1].line_number+1,
+              line_number:
+                linekeysCopy.length === 0
+                  ? 1
+                  : linekeysCopy[linekeysCopy.length - 1].line_number + 1,
             });
             setcurrentTemplate({
               ...currentTemplate,

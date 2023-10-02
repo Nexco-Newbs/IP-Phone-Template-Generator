@@ -15,7 +15,7 @@ const DebugContainer = styled.div`
 `;
 
 function DebugSection() {
-  const { currentTemplate }: globalContextTypes = useContext(GlobalContext);
+  const { currentTemplate,currentExpKey }: globalContextTypes = useContext(GlobalContext);
   return (
     <Section title="">
       <Accordion
@@ -44,6 +44,10 @@ function DebugSection() {
             {currentTemplate.expansionkeys?.map((data) => {
               return <p>{JSON.stringify(data)} </p>;
             })}
+          </DebugContainer>
+          <DebugContainer>
+            <h1>Current EXP key:</h1>
+            {JSON.stringify(currentExpKey)}
           </DebugContainer>
         </AccordionDetails>
       </Accordion>

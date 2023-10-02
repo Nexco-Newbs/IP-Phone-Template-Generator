@@ -2,6 +2,7 @@ import styled from "styled-components";
 import ExpModule from "../sections/ExpModule";
 import DebugSection from "../sections/Debug";
 import OutputSection from "../sections/Output";
+import BetterExpModule from "../sections/BetterExpModule";
 
 const ExpansionRoot = styled.div`
   display: block;
@@ -19,7 +20,7 @@ function Expansion() {
     return (
         <ExpansionRoot>
             <ExpansionContainer>
-                <ExpModule />
+                <BetterExpModule/>
                 <OutputSection/>
                 {/* <DebugSection/> */}
             </ExpansionContainer>

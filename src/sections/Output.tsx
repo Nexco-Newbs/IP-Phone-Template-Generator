@@ -140,11 +140,9 @@ function OutputSection() {
       </LineSection>
       <LineSection>
         {expkeys?.map((data, index) => {
-          const newindex = index + 1;
           return (
             <span>
               <br />
-              {/* Need to clarify which is which */}
               {"expansion_module." +
                 data.module_number +
                 ".key." +
