@@ -1,14 +1,11 @@
-
 import { AppBar, Toolbar,Button } from "@mui/material";
 import nexcoblack from "../resources/nexco_logo_black.png"
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import IconMenu from "./IconMenu";
-import { pagesLinks } from "./PageRouter";
 
 const NavbarRoot = styled.div`
   display: flex;
-  width: 100%;
+  width:100%;
   justify-content: center;
 `;
 const StyledAppBar = styled(AppBar)`
@@ -26,11 +23,8 @@ const NavbarImg = styled.img`
     height:7rem;
 `
 const NavbarButtons = styled.div`
-  margin-left: auto;
-  @media (max-width: 1300px) {
-    display: none;
-  }
-`;
+margin-left: auto;
+`
 const NavbarButton = styled(Button)`
 background-color: #2221219e;
 color:white;
